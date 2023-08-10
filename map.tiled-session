@@ -1,0 +1,75 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "map.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "D:/sprite_sheet..tsx": {
+            "scaleInDock": 1
+        },
+        "D:/sprite_sheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "map.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 636.5,
+                "y": 528
+            }
+        },
+        "sprite_sheet..tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "sprite_sheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "spritesheet.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "tilesheet.tsx": {
+            "scaleInDock": 0.75,
+            "scaleInEditor": 1
+        },
+        "untitled.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 468,
+                "y": 304
+            }
+        }
+    },
+    "last.exportedFilePath": "C:/Users/johnr/pacman",
+    "last.externalTilesetPath": "C:/Users/johnr/pacman",
+    "last.imagePath": "C:/Users/johnr/pacman",
+    "map.height": 36,
+    "map.lastUsedExportFilter": "CSV files (*.csv)",
+    "map.lastUsedFormat": "tmx",
+    "map.width": 28,
+    "openFiles": [
+        "map.tmx"
+    ],
+    "project": "map.tiled-project",
+    "recentFiles": [
+        "map.tmx",
+        "spritesheet.tsx",
+        "untitled.tmx",
+        "tilesheet.tsx",
+        "sprite_sheet..tsx",
+        "sprite_sheet.tsx",
+        "D:/sprite_sheet.tsx"
+    ],
+    "resizeMap.removeObjects": true,
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx"
+}
