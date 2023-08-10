@@ -251,18 +251,8 @@ class Ghost(pygame.sprite.Sprite):
         dx = target.rect.centerx - self.rect.centerx
         dy = target.rect.centery - self.rect.centery
         distance = math.sqrt(dx ** 2 + dy ** 2)
-        if distance > self.target_rad:
-            angle = math.atan2(dy, dx)
-        
-            new_x = self.rect.x + self.speed * math.cos(angle)
-            new_y = self.rect.y + self.speed * math.sin(angle)
-
-            new_rect = pygame.Rect(new_x,new_y,self.rect.width,self.rect.height)
-
-            #if not any(new_rect.colliderect(wall.rect) for wall in collide_group):
-            self.rect.x = new_x
-            self.rect.y = new_y
         return distance 
+    
     def update(self):
         self.state_machine()
         self.traverse_path()
