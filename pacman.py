@@ -3,7 +3,6 @@ from settings import *
 from sys import exit
 import json 
 import math 
-from astar import * 
 
 # Sprite group
 pac_group = pygame.sprite.Group()
@@ -204,7 +203,7 @@ class Ghost(pygame.sprite.Sprite):
                 self.scared()
             case 'Caught':
                 self.caught()
-            case None:
+            case _:
                 self.image = pygame.image.load(self.img).convert_alpha()
 
     def scared(self):
@@ -212,7 +211,13 @@ class Ghost(pygame.sprite.Sprite):
 
     def caught(self):
         self.image = pygame.image.load('./assets/ghosts/caught.png').convert_alpha()
-        
+        #Teleport to respawn then move back first position in path when we change state back to scared 
+        self.rect.center = self.spawn_pnt
+        timer = 35000
+        present_time = pygame.time.get_ticks()
+        if present_time >= timer:
+            self.state = None  
+    
     def traverse_path(self):
         if (self.state == None) or (self.state == 'Scared'):
             if self.waypoint_index < len(self.path):
@@ -224,27 +229,19 @@ class Ghost(pygame.sprite.Sprite):
                     angle = math.atan2(dy,dx)
                     new_x = self.rect.centerx + self.speed * math.cos(angle)
                     new_y = self.rect.centery + self.speed * math.sin(angle)
-                    new_rect = pygame.Rect(new_x,new_y,self.rect.width,self.rect.height)
-                    if not any(new_rect.colliderect(wall.rect) for wall in self.wall):
-                        self.rect.centerx = new_x 
-                        self.rect.centery = new_y
+                    #new_rect = pygame.Rect(new_x,new_y,self.rect.width,self.rect.height)
+                    #if not any(new_rect.colliderect(wall.rect) for wall in self.wall):
+                    self.rect.centerx = new_x 
+                    self.rect.centery = new_y
                 
                 # If our distance to the target is within the target radius 
-                if self.d_to_target(pacman) >= self.target_rad:
-                    pass
+               # if self.d_to_target(pacman) >= self.target_rad:
+                 #   pass
 
                 else:
                     self.waypoint_index += 1
             else:
                 self.waypoint_index = 0 
-        
-        if self.state == 'Caught':
-            #Teleport to respawn then move back first position in path when we change state back to scared 
-            self.rect.center = self.spawn_pnt
-            timer = 52000
-            present_time = pygame.time.get_ticks()
-            if present_time >= timer:
-                self.state = None  
     
     # Distance to our target
     def d_to_target(self,target):

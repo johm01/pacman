@@ -20,8 +20,16 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 636.5,
-                "y": 528
+                "x": 635.5,
+                "y": 522
+            }
+        },
+        "map_.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 400.5,
+                "y": 429
             }
         },
         "sprite_sheet..tsx": {
@@ -57,10 +65,12 @@
     "map.lastUsedFormat": "tmx",
     "map.width": 28,
     "openFiles": [
-        "map.tmx"
+        "map.tmx",
+        "map_.tmx"
     ],
     "project": "map.tiled-project",
     "recentFiles": [
+        "map_.tmx",
         "map.tmx",
         "spritesheet.tsx",
         "untitled.tmx",
